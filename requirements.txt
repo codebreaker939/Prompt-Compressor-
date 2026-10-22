@@ -1,0 +1,7 @@
+# FastAPI service
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+
+# Optional AI reduction mode (POST /reduce with "use_ai": true)
+llmlingua>=0.2.2
+torch>=2.1.0

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Reducer</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Prompt Reducer</div>
+        <span class="local-badge">Local</span>
+      </header>
+      <p class="intro">Compress prompts with LLMLingua.</p>
+
+      <form id="prompt-form">
+        <label for="prompt">Your prompt</label>
+        <textarea id="prompt" name="prompt" placeholder="Paste or write a prompt…" autofocus></textarea>
+        <button id="submit-button" type="submit">Compress <span aria-hidden="true">→</span></button>
+      </form>
+
+      <p id="api-status" class="api-status" role="status"><span aria-hidden="true">●</span> Local API · 8080</p>
+
+      <section class="output-section" aria-live="polite" aria-labelledby="output-title">
+        <div class="output-heading">
+          <h2 id="output-title">Output</h2>
+          <button id="copy-button" class="copy-button" type="button" disabled>Copy</button>
+        </div>
+        <pre id="output" class="output" data-empty="true">Your compressed prompt will appear here.</pre>
+      </section>
+    </main>
+    <script src="reducer.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

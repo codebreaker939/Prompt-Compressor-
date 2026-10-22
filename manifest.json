@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Prompt Reducer",
+  "version": "1.0.0",
+  "description": "Reduces AI prompts through a local FastAPI service.",
+  "action": {
+    "default_title": "Prompt Reducer",
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "http://127.0.0.1:8080/*",
+    "http://localhost:8080/*"
+  ]
+}
