@@ -29,7 +29,7 @@ Open `http://127.0.0.1:8080/docs`. Under `POST /compress`, click **Try it out** 
 
 The first AI-compression request can take longer because LLMLingua downloads and loads its model.
 
-Next, open `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select this project folder. Chrome documents this local development workflow in its [extension development basics](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world).
+Next, open `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select the `extension` folder (not the project root). Chrome documents this local development workflow in its [extension development basics](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world).
 
 ## 2. Host the FastAPI service publicly
 
@@ -96,7 +96,8 @@ Reload the unpacked extension after making these changes, then test compression 
 Do not upload the Python API, virtual environment, model cache, or `__pycache__` to the Chrome Web Store. Create a clean ZIP containing only the extension files:
 
 ```bash
-zip -r prompt-reducer-extension.zip \
+cd extension
+zip -r ../prompt-reducer-extension.zip \
   manifest.json popup.html popup.css popup.js reducer.js
 ```
 

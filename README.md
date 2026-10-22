@@ -17,5 +17,5 @@ The extension calls `POST http://127.0.0.1:8080/compress`, which uses LLMLingua.
 
 1. Open `chrome://extensions` (or `edge://extensions`).
 2. Enable **Developer mode**.
-3. Select **Load unpacked** and choose this folder.
+3. Select **Load unpacked** and choose the `extension` folder.
 4. Pin **Prompt Reducer**, click its icon, enter a prompt, then choose **Reduce prompt**.
